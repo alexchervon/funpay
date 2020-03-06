@@ -38,7 +38,7 @@ class YandexMoneyMessageParser {
         $this->parseWalletNumber();
         $this->parseConfirmationCode();
 
-        if (!$this->amount || !$this->wallet || $this->code) {
+        if (!$this->amount || !$this->wallet || !$this->code) {
             throw new \Exception('Response from service is incorrect');
         }
 
