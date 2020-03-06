@@ -74,9 +74,9 @@ class YandexMoneyMessageParser {
      */
     private function parseWalletNumber()
     {
-        preg_match('/(?P<wallet>\d{11,20})/m', $this->response, $walletMatches);
+        preg_match('/(?P<wallet>\d{11,20})/m', $this->response, $matches);
 
-        $this->wallet = $walletMatches['wallet'] ?? null;
+        $this->wallet = $matches['wallet'] ?? null;
     }
 }
 
